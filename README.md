@@ -5,7 +5,7 @@ this is command line tool to search library in Maven Central Repository.
 
 [Maven のセントラルリポジトリ](http://search.maven.org/#search|ga|1|) をコマンドラインから検索するためのツール。
 
-bower の search みたいなイメージ。
+bower の search みたいな感覚で検索したかったので。
 
 ##How to use
 ###デフォルト共通動作
