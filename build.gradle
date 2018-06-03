@@ -1,0 +1,15 @@
+apply plugin: 'java'
+
+sourceCompatibility = 10
+targetCompatibility = 10
+
+compileJava.options.encoding = 'UTF-8'
+
+jar.baseName = 'mvnfind'
+
+compileJava {
+    options.compilerArgs = [
+        "--module-path", classpath.asPath
+    ]
+    classpath = files()
+}
