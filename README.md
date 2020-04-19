@@ -31,7 +31,7 @@ $ ./gradlew jar
 $ java -jar mvnfind-X.X.X.jar --help
 ```
 
-上記コマンドを実行するか、以下のヘルプテキストを確認してください。
+上記コマンドを実行するか、以下のヘルプテキストを確認してください。  
 Please execute above command or see following text. 
 
 See : [help.txt](https://github.com/opengl-8080/MavenFind/blob/master/src/main/resources/help.txt)
