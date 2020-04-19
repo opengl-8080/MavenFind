@@ -1,15 +1,33 @@
-apply plugin: 'java'
+plugins {
+    id "java"
+}
 
-sourceCompatibility = 10
-targetCompatibility = 10
+version = "1.0.0"
+sourceCompatibility = 11
+targetCompatibility = 11
+[compileJava, compileTestJava]*.options*.encoding = "UTF-8"
 
-compileJava.options.encoding = 'UTF-8'
+repositories {
+    mavenCentral()
+}
 
-jar.baseName = 'mvnfind'
+dependencies {
+    implementation "com.fasterxml.jackson.core:jackson-databind:2.10.3"
+    
+    testImplementation "org.junit.jupiter:junit-jupiter:5.6.2"
+    testImplementation "org.assertj:assertj-core:3.15.0"
+}
 
-compileJava {
-    options.compilerArgs = [
-        "--module-path", classpath.asPath
-    ]
-    classpath = files()
+jar {
+    archiveBaseName = "mvnfind"
+    configurations.runtimeClasspath.each {
+        from zipTree(it)
+    }
+    manifest {
+        attributes "Main-Class": "mvnfind.Main"
+    }
+}
+
+test {
+    useJUnitPlatform()
 }

@@ -1,0 +1,28 @@
+[Usage]
+$ java -jar mvnfind-X.X.X.jar -h | --help
+$ java -jar mvnfind-X.X.X.jar [common-options] <advanced-options>
+$ java -jar mvnfind-X.X.X.jar [common-options] <query>
+
+common-options
+    -r, --row <row-number> (default 10)
+    -s, --start <start-offset> (default 0)
+    --all (show all versions)
+    --httpProxy <proxy-host:port>
+    --proxyUser <username>
+    --proxyPass <password>
+
+advanced-options
+    -g, --groupId <groupId>
+    -a, --artifactId <artifactId>
+    -v, --version <version>
+    -p, --packaging <packaging>
+    -l, --classifier <classifier>
+    -c, --className <className>
+    -f, --fullClassName <fullClassName>
+    -1, --sha1 <sha1-hash>
+
+query
+    Any search query.
+    This parameter is ignored if "advanced-options" are exists.
+
+version : 1.0.0
